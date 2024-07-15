@@ -1,0 +1,19 @@
+{
+  "name": "kcworks-transition",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "import": "node importer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "Brian Adams <adamsb@msu.edu>",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7",
+    "stream-json": "^1.8.0"
+  }
+}
