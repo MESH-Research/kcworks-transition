@@ -14,4 +14,6 @@ The default entrypoint for the container starts an express server on port :3000 
 
 ## Importer entrypoint
 
-The command `["npm", "run", "importer.js"]` will start the importer script. This script parses the JSON file and UPSERTS each record into the SQLITE database.
+The command `["npm", "run", "importer.js"]` will start the importer script. This script parses the JSON file and UPSERTS each record into the SQLITE database. The script will then watch for changes and re-run the import.
+
+If the import fails at any point (malformed json, etc) the container will die. This is to allow for direct access to the error message for debuging and to allow the orchestrator to handle restarting the container to re-attempt.
